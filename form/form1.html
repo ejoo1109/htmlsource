@@ -7,7 +7,13 @@
   </head>
   <body>
     <!--form : 웹서버에 정보를 제출하기 위한 용도-->
-    <form action="" method="" name="" novalidate autocapitalize="">
+    <form
+      action="../link/link1.html"
+      method=""
+      name=""
+      novalidate
+      autocapitalize=""
+    >
       <!--action : 전송한 정보를 처리할 웹페이지의 url
             method : 서버로 전송할 http 방식(get(기본값), post)
             get검색어 처리할때 위에 주소창에 검색내역이 따라다님
@@ -17,17 +23,20 @@
             autocapitalize : 자동완성(on(기본값),off)
         -->
       <div>
+        <input />
+      </div>
+      <div>
         <!-- 라벨 생성-->
         <label for="username">이름</label>
         <!-- 입력할 칸 생성-->
-        <input type="text" id="username" />
+        <input type="text" id="username" name="usrname" />
         <!-- 버튼 생성-->
         <!--이름을 클릭하면 칸으로 커서 옮기기- for 생성 하고 id에 값 입력-->
       </div>
       <div>
         <!--비밀번호는 입력값이 보이지 않음 비밀번호 클릭시 커서 위치 옮기고 싶으면 for,id에 같은값입력-->
         <label for="password">비밀번호</label>
-        <input type="password" name="" id="password" />
+        <input type="password" name="password" id="password" />
       </div>
       <div>
         <!--radio : 선택지를 주고 하나만 선택하기 name과 같이 안쓰면 두개 다 선택됨-->
@@ -36,14 +45,31 @@
         <input type="radio" name="gender" id="" />여성
       </div>
       <div>
-        <!--checkbox : 선택지를 주고 중복으로 선택하기 name과 같이 안쓰면 두개 다 선택됨-->
+        <!--checkbox : 선택지를 주고 중복으로 선택하기 name과 같이 씀-->
         <label for="">취미</label>
         <input type="checkbox" name="hobby" id="" />영화감상
-        <input type="checkbox" name="hobby" id="" />독서
+        <input type="checkbox" name="hobby" id="" checked />독서
         <input type="checkbox" name="hobby" id="" />운동
         <input type="checkbox" name="hobby" id="" />잠자기
       </div>
-      <input type="button" value="보내기" />
+      <div>
+        <!--텍스트 상자만들기-->
+        <textarea name="" id="" cols="30" rows="10">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quibusdam enim beatae id! Obcaecati, laboriosam! Eum non voluptatibus aperiam sed accusantium fuga esse voluptate similique minus quia? Nulla error ducimus possimus fugiat, neque voluptatem esse delectus. Praesentium veritatis doloribus deserunt quisquam tempora dolorem recusandae doloremque quasi nulla, ullam odio maiores blanditiis voluptate dolorum ipsum fugit temporibus eveniet exercitationem voluptatem laborum voluptates, officia perferendis libero magni? Officia cupiditate corrupti molestiae, autem voluptatum debitis reprehenderit sint maiores esse nulla repellat voluptatem sequi culpa aspernatur saepe error! Eveniet, nobis et saepe qui corporis eum labore blanditiis temporibus itaque reiciendis accusamus officia repellat hic.
+        </textarea>
+      </div>
+      <div>
+        <select name="" id="">
+          <option value="bmw">BMW</option>
+          <option value="benz" selected>Benz</option>
+          <option value="HYUNDAI">현대자동차</option>
+          <option value="kia">기아자동차</option>
+        </select>
+      </div>
+      <!--submit action의 주소값으로 전달-->
+      <input type="button" value="일반버튼" />
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
     </form>
   </body>
 </html>
